@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="First web assignment">
+  <meta name="author" content="Nicholas Bova">
+
+  <script>
+    function FontChanged(value){
+      if(value != ""){
+        document.getElementById("txtarea").style.fontFamily = value;
+      }
+    }
+
+    function ColorChanged(value){
+      if(value != ""){
+        document.getElementById("txtarea").style.color = value;
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <style>
+    body{
+      font: Segoe UI, Times, sans-serif;
+      margin-left: 45em;
+      margin-right: 45em;
+    }
+
+    h1{
+      font: Verdana;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    select{
+      text-align: left;
+    }
+
+    textarea{
+      text-align: left;
+      vertical-align: bottom;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      resize: none;
+      font-size: 16px;
+      clear: both;
+    }
+
+    #colors{
+      display:inline-block;
+      float: right;
+    }
+  </style>
+
+  <title>Web Assignment 0</title>
+  <h1>SWEN-344 Web Assignment 0</h1>
+  <h2>Section 02</h2>
+
+  <select onchange="FontChanged(this.value)">
+    <option value=""></option>
+    <option value="Verdana">Verdana</option>
+    <option value="Arial">Arial</option>
+    <option value="Times">Times</option>
+    <option value="Gothic">Gothic</option>
+    <option value="Impact">Impact</option>
+  </select>
+
+  <div id="colors">
+    <input type="radio" id="black" name="color" value="black" onclick="ColorChanged(this.value)">
+    <label for="Black">Black</label><br>
+    <input type="radio" id="Red" name="color" value="red" onclick="ColorChanged(this.value)">
+    <label for="Red">Red</label><br>
+    <input type="radio" id="Green" name="color" value="green" onclick="ColorChanged(this.value)">
+    <label for="Green">Green</label><br>
+    <input type="radio" id="Blue" name="color" value="blue" onclick="ColorChanged(this.value)">
+    <label for="Blue">Blue</label><br>
+    <input type="radio" id="Purple" name="color" value="purple" onclick="ColorChanged(this.value)">
+    <label for="Purple">Purple</label><br>
+  </div>
+
+
+  <textarea id="txtarea" rows="4" cols="50">Enter some text here...</textarea>
+</body>
+</html>

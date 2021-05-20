@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="First web assignment">
+  <meta name="author" content="Nicholas Bova">
+  <link rel="stylesheet" href="../css/classroom.css">
+  <script src="../js/classroom.js"></script>
+</head>
+<body onload="CreateRooms()">
+  <h1>COVID Classroom Capacity</h1>
+  <h3>Each time someone enters/ leaves the classroom, select the room and click the appropriate button</h3>
+  <div class="container">
+    <div class="rooms" id="room1">
+      <h2>Room 1</h2>
+      <h2 name="message"></h2>
+    </div>
+    <div class="rooms" id="room2">
+      <h2>Room 2</h2>
+      <h2 name="message"></h2>
+    </div>
+    <div class="rooms" id="room3">
+      <h2>Room 3</h2>
+      <h2 name="message"></h2>
+    </div>
+    <div class="rooms" id="room4">
+      <h2>Room 4</h2>
+      <h2 name="message"></h2>
+    </div>
+</div>
+
+  <div class="container">
+    <div class="studentCount">
+      <h3><span id="room1Count" title="room1"></span></h3>
+    </div>
+    <div class="studentCount">
+      <h3><span id="room2Count" title="room2"></span></h3>
+    </div>
+    <div class="studentCount">
+      <h3><span id="room3Count" title="room3"></span></h3>
+    </div>
+    <div class="studentCount">
+      <h3><span id="room4Count" title="room4"></span></h3>
+    </div>
+  </div>
+
+  <div class="container">
+    <form name="roomRadios" class="roomRadios">
+      <input type="radio" id="room1radio" value="room1Count" name="room">
+      <label for="room1Count">Room 1</label><br>
+      <input type="radio" id="room2radio" value="room2Count" name="room">
+      <label for="room2Count">Room 2</label><br>
+      <input type="radio" id="room3radio" value="room3Count" name="room">
+      <label for="room3Count">Room 3</label><br>
+      <input type="radio" id="room4radio" value="room4Count" name="room">
+      <label for="room4Count">Room 4</label><br>
+    </form>
+
+    <div class="buttons">
+      <button type="button" id="addButton" onclick="AddStudent()">+</button>
+      <button type="button" id="subtractButton" onclick="SubtractStudent()">-</button>
+    </div>
+  </div>
+
+</body>
+</html>
